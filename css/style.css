@@ -1,0 +1,521 @@
+/****************** scrollbar style *******************/
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #9c9c9c; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #9c9c9c; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #9c9c9c; 
+  }
+
+/****************** website style *******************/
+@font-face {
+    font-family: 'IRANSansMobile';
+    src: url(font/IRANSansMobile_Light.ttf);
+}
+body{
+    color: #53565C;
+    font-family: 'IRANSansMobile';
+    overflow-x: hidden;
+}
+.content-container{
+    width: 95%;
+    margin: 0 auto;
+}
+::selection{
+    background-color: #ff7fd2;
+}
+:root{
+    --light-background: #EBEDF0;
+}
+/****************** toggle bar style *******************/
+.toggle-bar{
+    width: 85px;
+    height: 25px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 3%;
+    left: 10%;
+    box-shadow: -7px -7px 15px rgba(255, 255, 255, 0.6),
+                7px 7px 15px rgba(70, 70, 70, 0.12);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+.toggle-bar> input[type="checkbox"]{
+    position: absolute;
+    -webkit-appearance: none;
+    width: 60px;
+    height: 20px;
+    border: 5px sloid #ececec;
+    box-shadow: -7px -7px 15px rgba(255, 255, 255, 0.6),
+    7px 7px 15px rgba(70, 70, 70, 0.12);
+    outline: none;
+    cursor: pointer;
+    left: 15px;
+    border-radius: 40px;
+}
+.toggle-bar> input[type="checkbox"]:before,
+.toggle-bar> input[type="checkbox"]:after{
+content: "";
+position: absolute;
+margin: auto;
+top: 0;
+bottom: 0;
+transition: 0.3s;
+}
+.toggle-bar> input[type="checkbox"]:before{
+    height: 22px;
+    width: 22px;
+    background-color: #ccc;
+    box-shadow: -7px -7px 15px rgba(255, 255, 255, 0.6),
+    7px 7px 15px rgba(70, 70, 70, 0.12);
+    border-radius: 50%;
+    left: 5px;
+}
+input[type="checkbox"]:checked::before{
+    left: 30px;
+    background-color: #000000;
+}
+input[type="checkbox"]:checked::after{
+    background-color: #000000;
+}
+
+/**************** slider style *****************/
+.slider{
+    font-family: 'IRANSansMobile';
+    width: 100%;
+    height: 650px;
+    background: var(--light-background);
+    margin: 40px 0;
+    position: relative;
+    overflow: hidden;
+}
+#logo-on-slider{
+    width: 150px;
+    position: absolute;
+    top: 50px;
+    right: 30px;
+}
+.login-buttons{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+.login-buttons button{
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-radius: 5px;
+}
+.login-buttons .btn-login{
+    background-color: #FF00A6;
+    color: #fff;
+    font-weight: bold;
+    transition: all .7s;
+}
+.login-buttons .btn-login:hover{
+    background: #ff7fd2;
+    color: #53565C;
+}
+.user-icon-on-slider{
+    font-size: 25px;
+    position: absolute;
+    top: 50px;
+    left: 20px;
+}
+.slider .left-section{
+    display: inline-block;
+    width: 60%;
+    height: 85%;
+    margin-top: 85px;
+}
+.slider .right-section{
+    width: 90%;
+    position: relative;
+    top: 200px;
+    right: 50px;
+    margin-bottom: 40px;
+}
+.slider .right-section h1{
+    font-weight: bold;
+    display: inline-block;
+}
+.slider .right-section h1.color_text{
+    color: #FF00A6;
+}
+.find-address{
+    width: 70%;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 25px;
+    border: 1px solid #EBEDF0;
+    box-shadow: rgb(58 61 66 / 6%) 0px 1px 0px, rgb(0 0 0 / 20%) 0px 4px 16px -8px;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+.find-address input{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 0;
+    right: 50px;
+    padding-right: 5px;
+}
+.find-address i{
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all 150ms ease-out 0s;
+    position: absolute;
+    top: 5px;
+    transition: all .2s;
+}
+.find-address i:first-child{
+    right: 10px;
+}
+.find-address i:last-child{
+    left: 10px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 0, 166);
+}
+.find-address i:hover{
+    box-shadow: 2px 2px 8px #cecece;
+}
+
+/*************** slider menu style ***************/
+.slider-menu{
+    width: 95%;
+    overflow-x: scroll;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(2.5rem);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    z-index: 10;
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    bottom: 40px;
+    margin: 0
+    auto !important;
+}   
+.slider-menu .slider-menu-item{
+    display: inline-block;
+    padding: 15px 0;
+}
+.slider-menu .slider-menu-item img{
+    width: 40px;
+    margin: 10px;
+}
+
+/***************** category style *****************/
+.category{
+    font-family: 'IRANSansMobile';
+}
+.category h5.section-title{
+    margin-top: 50px;
+}
+.category .category-item{
+    display: inline-block;
+    width: 100%;
+    background: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: rgb(58 61 66 / 6%) 0px 1px 0px, rgb(0 0 0 / 30%) 0px 8px 32px -16px;
+    cursor: pointer;
+    margin: 15px 0;
+    transition: all 0.5s;
+}
+.category .category-item:hover{
+    box-shadow: 10px 10px 15px #ff7fd2 inset;
+}
+.category .category-item:hover .category-title{
+    fill:#f5cb22;
+    transform: rotateY(360deg);
+}
+.category .category-item .category-img{
+    width: 100%;
+    height: 6rem;
+    position: relative;
+}
+.category .category-item .category-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.category .category-item .category-img:hover{
+    box-shadow: 5px 5px 20px #d6d6d6;
+}
+.category .category-item .category-title{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 2px 10px;
+    background: #fff;
+    border-top-left-radius: 10px;
+    margin: 0;
+    color: rgb(75, 75, 75);
+    font-weight: 600;
+}
+
+/*************** application section style ***************/
+.application{
+    font-family: 'IRANSansMobile';
+    width: 100%;
+    height: auto;
+    background: var(--light-background);
+    margin: 200px 0;
+    padding: 0 100px 50px 50px;
+    border-bottom-right-radius: 120px;
+    
+}
+.application .left-section{
+    width: 100%;
+    height: 35rem;
+    background-image: url('../images/img_app_mockup@2x.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: -150px;
+}
+.description-app h2{
+    font-weight: 700;
+    font-size: 2rem;
+    color: rgb(61, 61, 61);
+    margin-top: 3rem;
+}
+.description-app p{
+    font-weight: 400;
+    line-height: 1.25rem;
+    color: rgb(90, 90, 90);
+    margin: 2.2rem 0;
+}
+.link-app p{
+    font-weight: 700;
+    font-size: 0.8rem;
+    line-height: 1rem;
+    color: rgb(80, 80, 80);
+}
+.get-link{
+    width: 280px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: rgb(58 61 66 / 6%) 0px 1px 0px, rgb(0 0 0 / 20%) 0px 4px 16px -8px;
+    margin-bottom: 2rem;
+    position: relative;
+}
+.get-link input{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+.get-link button{
+    font-size: 0.8rem;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 0, 166);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.get-link button:hover{
+    color: rgba(0, 0, 0, 0.8);;
+}
+.img-download-link img{
+    width: 100%;
+    border-radius: 5px;
+}
+/**************** work style ***************/
+.work{
+    font-family: 'IRANSansMobile';
+    width: 100%;
+    height: auto;
+    background: var(--light-background);
+    padding: 80px 40px;
+    margin: 40px 0;
+    border-radius: 30px;
+}
+.work .left-section{
+    width: 100%;
+    height: 20rem;
+    background-image: url('../images/vendor_pic.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: -160px;
+}
+.work .work-description h2{
+    font-weight: 700;
+    color: rgb(61, 61, 61);
+}
+.work .work-description p{
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: rgb(61, 61, 61);
+    margin: 2.2rem 0;
+}
+.work .work-description button{
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #FF00A6;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: all 0.5s;
+}
+.work .work-description button:hover{
+    color: rgba(0, 0, 0, 0.8);
+    opacity: 0.8;
+    padding: 15px;
+}
+
+/*************** city style *****************/
+.city{
+    font-family: 'IRANSansMobile';
+}
+.city h2{
+    font-weight: 700;
+    font-size: 1rem;
+    display: inline-block;
+    color: rgb(61, 61, 61);
+    text-align: initial;
+    margin: 20px 0;
+}
+.city div>a{
+    font-size: 0.7rem;
+    line-height: 0.75rem;
+    color: rgb(165, 165, 165);
+    text-decoration: none;
+}
+.city div>a:hover{
+    font-weight: bold;
+    color: #53565C;
+}
+
+/************* footer style **************/
+footer{
+    font-family: 'IRANSansMobile';
+    background: var(--light-background);;
+    margin-top: 40px;
+    padding: 60px 40px;
+}
+#logo-in-footer{
+    width: 100%;
+}
+.footer-heading .title{
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: rgb(255, 0, 166);
+}
+.footer-heading .description{
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: rgb(90, 90, 90);
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+footer .social-links i{
+    text-align: center;
+    line-height: 2.5rem;
+    cursor: pointer;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 0.09375rem solid rgba(58, 61, 66, 0.06);
+    border-radius: 50%;
+    color: rgb(58, 61, 66);
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgb(58 61 66 / 6%) 0px 1px 0px, rgb(0 0 0 / 20%) 0px 4px 16px -8px;
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+    transition: all 0.4s;
+}
+footer .social-links i:hover{
+    box-shadow: 2px 2px 8px #FF00A6;
+}
+footer .menu-in-footer{
+    margin: 20px 0;
+}
+footer .menu-in-footer li a{
+    font-weight: 400;
+    font-size: 0.8rem;
+    line-height: 2rem;
+    color: rgb(61, 61, 61);
+    text-decoration: none;
+    padding-bottom: 2px;
+}
+footer .menu-in-footer li a:hover{
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #ff98dbcb;
+    border-bottom: 1px solid #ff98dbcb;
+}
+footer .col-namad-in-footer{
+    text-align: -webkit-left;
+}
+footer .namad-in-footer{
+    width: 60%;
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+}
+footer .namad-in-footer img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+/************** blink text style **************/
+.blink_text {
+    animation: blinker 1s linear infinite;
+  }
+  
+  @keyframes blinker {
+    25% {
+      opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+  }
